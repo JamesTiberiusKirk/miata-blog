@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Mia Miot Miat'
+theme = 'miat-blog-theme'
+
+[security]
+enableInlineShortcodes = true

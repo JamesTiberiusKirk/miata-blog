@@ -1,0 +1,25 @@
+{{- $src := .Get "src" -}}
+{{- $size := .Get "size" -}}
+{{- $class := .Get "class" -}}
+{{- $crop := .Get "crop" -}}
+
+{{ $image := .Page.Resources.GetMatch $src }}
+
+{{ if $size }}
+  {{ $image = $image.Resize $size }}
+{{ end }}
+
+{{ if $crop }}
+  {{ $image = $image.Crop $crop }}
+{{ end }}
+
+
+<div style="display: block;">
+  <img
+    class="{{ $class }}"
+    style="padding-bottom:10px; display:block; max-width: 100%; object-fit: cover;"
+    src="{{ $image.RelPermalink }}"
+    width="{{ $image.Width }}"
+    height="{{ $image.Height }}" 
+  >
+</div>
