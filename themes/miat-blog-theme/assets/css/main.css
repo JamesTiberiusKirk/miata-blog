@@ -73,6 +73,17 @@ a {
   }
 }
 
+blockquote {
+  padding-left: 12px;
+  padding-right: 12px;
+  width: fit-content;
+  border: 1px dashed var(--camouflage-green);
+  :before {
+    content: "\00BB";
+    margin-right: 6px;
+  }
+}
+
 
 .screen {
   border: 1px dashed var(--silver);
