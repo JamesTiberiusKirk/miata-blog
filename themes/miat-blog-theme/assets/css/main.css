@@ -11,7 +11,6 @@ body {
   color: var(--silver);
   font-family: sans-serif;
   line-height: 1.5;
-  margin: 1rem;
 }
 
 header {
@@ -21,7 +20,9 @@ header {
     margin: 0;
   }
   .title {
+
     width: 100%;
+
     .inner {
       width: fit-content;
       margin-left: auto;
@@ -84,8 +85,12 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
   .screen {
-    width: 90%;
+    border: 1px dashed red;
+    width: 100%;
   }
 }
 
