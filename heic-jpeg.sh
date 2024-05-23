@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # List of directories to ignore
-ignore_dirs=("public/")
+ignore_dirs=("public/" "resources/")
+
 
 # Function to check if a file is in an ignored directory
 is_ignored() {
@@ -14,21 +15,16 @@ is_ignored() {
     return 1
 }
 
-# Function to convert HEIC to JPEG
+# Function to convert HEIC to JPEG and remove the original HEIC file
 convert_heic_to_jpeg() {
     local heic_file="$1"
-    local jpeg_file="${heic_file%.heic}.jpeg"
+    local jpeg_file="${heic_file%.*}.jpeg"
     echo "Converting $heic_file to $jpeg_file"
-    sips -s format jpeg "$heic_file" --out "$jpeg_file"
+    sips -s format jpeg "$heic_file" --out "$jpeg_file" && rm "$heic_file"
 }
 
-# Export the functions and variables for subshells
-export -f convert_heic_to_jpeg
-export -f is_ignored
-export ignore_dirs
-
 # Find and process all HEIC files recursively, ignoring specified directories
-find . -type f -iname "*.heic" | while read -r file; do
+find . -type f \( -iname "*.heic" -o -iname "*.HEIC" \) | while read -r file; do
     if ! is_ignored "$file"; then
         convert_heic_to_jpeg "$file"
     else
