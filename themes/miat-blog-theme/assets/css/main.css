@@ -11,6 +11,7 @@ body {
   color: var(--silver);
   font-family: sans-serif;
   line-height: 1.5;
+  height: 100%;
 }
 
 header {
@@ -131,4 +132,8 @@ blockquote {
 
 .rounded {
   border-radius: 1rem;
+}
+
+.object-scale-down {
+  object-fit: scale-down;
 }

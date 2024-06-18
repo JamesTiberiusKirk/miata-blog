@@ -1,0 +1,10 @@
+<div style="display: flex; flex-direction: row;">
+{{- with .Inner -}}
+  {{- $inner := split . "---" -}}
+  {{- range $i, $e := $inner -}}
+    <div style="padding: 5px; margin-top: auto; margin-bottom: auto;">
+      {{ $e | safeHTML }}
+    </div>
+  {{ end }}
+{{- end -}}
+</div>
