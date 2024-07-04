@@ -123,6 +123,20 @@ blockquote {
   }
 }
 
+
+/* Actual theme */
+
+.taxonomy-terms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  div{
+    padding: 0.5rem;
+  }
+}
+
+
 /* Utility classes */
 
 .center {
@@ -137,3 +151,4 @@ blockquote {
 .object-scale-down {
   object-fit: scale-down;
 }
+
