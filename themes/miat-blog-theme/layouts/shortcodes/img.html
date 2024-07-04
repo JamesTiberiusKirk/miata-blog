@@ -1,3 +1,6 @@
+{{/* USAGE */}}
+{{/* < img crop="600x220 Center" class="center rounded" src="mia.jpeg" size="600x" > */}}
+
 {{- $src := .Get "src" -}}
 {{- $size := .Get "size" -}}
 {{- $class := .Get "class" -}}
@@ -14,9 +17,9 @@
 {{ end }}
 
 
-<div style="display: block;">
+<div class="sc__img" style="display: block;">
   <img
-    class="{{ $class }}"
+    class="sc__img_img {{ $class }}"
     style="padding-bottom:10px; display:block; max-width: 100%; object-fit: cover;"
     src="{{ $image.RelPermalink }}"
     width="{{ $image.Width }}"
