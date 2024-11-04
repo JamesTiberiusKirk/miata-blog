@@ -72,6 +72,15 @@ a {
       font-size: x-small;
     }
   }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    th, td {
+      border: 1px solid var(--scorpion);
+      padding: 0.5rem;
+    }
+  }
 }
 
 blockquote {
@@ -152,3 +161,8 @@ blockquote {
   object-fit: scale-down;
 }
 
+.line-separator {
+  border-bottom: 1px dashed var(--scorpion);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
