@@ -2,7 +2,7 @@
 title = 'Useful links and info'
 date = 2024-05-22T10:01:59+01:00
 draft = false
-tags = ['useful info', 'archives']
+tags = ['useful info', 'archive']
 +++
 
 | Actual link | Archive |
